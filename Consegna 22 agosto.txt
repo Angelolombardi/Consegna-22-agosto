@@ -1,0 +1,60 @@
+import math
+# Definisco le formule per il calcolo del perimetro di ogni figura
+
+def calcola_perimetro_quadrato():
+    lato = float(input("Inserisci la lunghezza del lato del quadrato: "))
+    perimetro = lato * 4
+    print(f"Il perimetro del quadrato è: {perimetro:.2f}")
+
+def calcola_circonferenza_cerchio():
+    raggio = float(input("Inserisci il raggio del cerchio: "))
+    circonferenza = 2 * 3.1478 * raggio
+    print(f"La circonferenza del cerchio è: {circonferenza:.2f}")
+
+def calcola_perimetro_rettangolo():
+    base = float(input("Inserisci la lunghezza della base del rettangolo: "))
+    altezza = float(input("Inserisci l'altezza del rettangolo: "))
+    perimetro = 2 * (base + altezza)
+    print(f"Il perimetro del rettangolo è: {perimetro:.2f}")
+    
+def calcola_perimetro_triangolo_equilatero():
+    lato = float(input("Inserisci la lunghezza del lato del triangolo equilatero: "))
+    perimetro = 3*(lato)
+    print(f"Il perimetro del triangolo equilatero è {perimetro:2f}")
+    
+def calcola_perimetro_triangolo_isoscele():
+    base = float(input("Inserisci lunghezza della base: "))
+    altezza = float(input("Inserisci lunghezza dell'altezza: "))
+    perimetro = (base*altezza)/2
+    print(f"Il perimetro del triangolo isoscele è: {perimetro:.2f}")   
+    
+# Assegno a ogni figura un numero
+
+def main():
+    print("Scegli la figura geometrica di cui vuoi calcolare il perimetro:")
+    print("1. Quadrato")
+    print("2. Cerchio")
+    print("3. Rettangolo")
+    print("4. Triangolo Equilatero")
+    print("5. Triangolo isoscele")
+    
+    scelta = input("Inserisci il numero in base alla scelta della figura: ")
+    
+# Utilizzo if ed elif per impostare le scelte assegnate a ogni figura    
+    if scelta == "1":
+        calcola_perimetro_quadrato()
+    elif scelta == "2":
+        calcola_circonferenza_cerchio()
+    elif scelta == "3":
+        calcola_perimetro_rettangolo()
+    elif scelta == "4":
+        calcola_perimetro_triangolo_equilatero()
+    elif scelta == "5":
+        calcola_perimetro_triangolo_isoscele 
+        
+#Utilizzo else per avere una risposta in caso il numero non corrisponde           
+    else:
+        print("Scelta errata. Riprovare.")
+        main()
+# Avvia il programma
+main()
